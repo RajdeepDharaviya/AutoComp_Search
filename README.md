@@ -1,12 +1,22 @@
-# React + Vite
+## React Autocomplete Search box
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is **Autocomplete search box** with the use of caching (using react state) , debouncing for performance and keyboard navigation.
 
-Currently, two official plugins are available:
+### Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**SearchBox.jsx** is reusable component that let user to type search in search box.
 
-## Expanding the ESLint configuration
+**Debouncing fetching :** This feature wait 500ms to after last keystroke for another keystroke if not then call that's eventually boost performance of search.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**In-Memoery Caching :** This feature stores user's previous searches and won't call api if user searches a same thing or word that's also boost performance of the search.
+
+**Keyboard Navigation :** This feature saves some clicks of user through navigation directly by ArrowDown or ArrowUp key.
+
+**Automatic Dropdown toggle :** This feature gives user idea about the result of searches give suggestion or upcoming result of searching.
+
+
+
+
+
+
+
